@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    Lehigh Dashboard
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <script src="./assets/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+   <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="heled0yuvkswkv3"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <style>
+      .accordion-item{background-color:#fff;padding:10px;}
+.accordion-button::after{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")}
+.accordion-button:not(.collapsed)::after{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");transform:rotate(-180deg);}
+.accordion-item{margin-bottom:0px;}
+.scraperAside{display:block;font-size:0.85rem;font-style:italic;background-color:#f1f1f1;padding:15px;margin-top:5px;border-radius:5px;color:#000;}
+        .scraperH1{font-size:1.5rem;text-transform:uppercase;border-bottom:2px solid;margin-top:10px;}
+        .scraperInput{padding-left:5px;border-width:1px;border-top:none;border-right:none;border-left:none;border-bottom: 2px solid #d6d6d6;height:35px;min-width:30%;}
+        .scraperBTN{background:#000;border:1px solid #000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;margin-left:0px;}
+        .scraperBTN:hover{color:#000;background:#fff;}
+        .clearBTN{background:#000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;border:1px solid #000;}
+        .clearBTN:hover{background:#fff;border: 1px solid #000;color:#000;}
+        .resultsAside{display:block;font-size:1rem;background-color:#fff;padding:15px;margin-top:5px;min-height: 90px;border-radius:10px;font-weight:700;}
+        .marginTop{margin-top:15px;}
+        .centerTheText{text-align:center;}
+        .noMargin{margin: 0 auto;}
+        .resultsBlock{text-transform: uppercase;font-size: 1rem;color:#000;}
+        .itemsFound{display:block;font-size:0.9rem;margin-top:5px;}
+        .dropdownSelect{display: block;margin-bottom:10px;font-size:0.75rem;min-height:35px;border-radius: 8px;background-color:#334767;color:#fff;padding:10px;width:234px;text-transform:uppercase;font-weight:700;}
+        .blackBar{background:#000;color:#fff;font-size:0.7rem;text-align:center;padding:5px;}
+        .bottomMargin{margin-bottom:50px;}
+        #eachItemFound{word-break:break-all;}
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+        tr:nth-child(even){background-color: #f5f5f5;color:#000;}
+        tr:nth-child(odd){background-color: #fff;color:#000;}
+        th{background-color:#000;color:#fff;}
+  </style>
+</head>
+<body class="g-sidenav-show  bg-gray-200">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href="index.html" target="_blank">
+        <img src="./assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold text-white">Lehigh Dashboard</span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Lehigh Brands</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="index.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">dashboard</i>
+            </div>
+            <span class="nav-link-text ms-1">Retail B2C</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="outfitters.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">hiking</i>
+            </div>
+            <span class="nav-link-text ms-1">Outfitters</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="safetyshoes.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">do_not_step</i>
+            </div>
+            <span class="nav-link-text ms-1">Safety Shoes</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="slipgrips.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">water</i>
+            </div>
+            <span class="nav-link-text ms-1">SlipGrips</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="customfit.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">straighten</i>
+            </div>
+            <span class="nav-link-text ms-1">CustomFit</span>
+          </a>
+        </li>
+        <li class="nav-item mt-3">
+            <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Apps &amp; Links</h6>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="dropbox.html">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">inventory_2</i>
+              </div>
+              <span class="nav-link-text ms-1">Dropbox</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white active bg-gradient-info" href="inventory.html">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">production_quantity_limits</i>
+              </div>
+              <span class="nav-link-text ms-1">Check Inventory</span>
+            </a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="search-scraper.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">construction</i>
+            </div>
+            <span class="nav-link-text ms-1">Search Scraper</span>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="plp-scraper.html">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">engineering</i>
+              </div>
+              <span class="nav-link-text ms-1">PLP Scraper</span>
+            </a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="toprated.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">rate_review</i>
+            </div>
+            <span class="nav-link-text ms-1">Top Rated Scraper</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="qr.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">qr_code_scanner</i>
+            </div>
+            <span class="nav-link-text ms-1">QR Codes</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Retail B2C</li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">Inventory Search</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- 
+        End Navbar
+    -->
+    <div class="container-fluid py-4">
+      <div class="row">
+      <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-info shadow-primary-info border-radius-lg pt-4 pb-3">
+                  <h6 class="text-white text-capitalize ps-3">Inventory By Style, Width & Size</h6>
+                  <p class="text-white p-3 pt-0 pb-0">To get current inventory levels enter your style number below.<br />
+                    <span style="font-weight: bold;color:#fff;">Note - Inventory check will only work for styles that have the following widths:<br />
+                      Narrow: N<br />
+                      Medium: M, D<br />
+                      Wide: W, E, 2E<br />
+                      Extra Wide: XW, 4E<br />
+                      Extra Extra Wide: 6E<br /></span>
+                      * Other widths / better styling will be added in a future update. Maybe.</span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-body p-3 pb-2">
+              <form>
+                  <input id="styleNums" placeholder="Style Number (e.g. GB00350)" class="scraperInput" style="display:block;margin-bottom:10px;"></input>
+                  <button type="button" class="btn btn-info" value='send' id="submit" onclick="getSearchStyles()">Submit</button>
+                  <button type="button" class="btn btn-dark" value='send' id="submit" onclick="clearSearchResults()">Clear Results</button>
+              </form>
+              <div class="row fullResults ml-0 mr-0">
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div>
+                        <p class="resultsAside">
+                            <span class="itemsFound" id="totalEachItemsFoundMedium"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                  <div>
+                      <p class="resultsAside">
+                          <span class="itemsFound" id="totalEachItemsFoundWide"></span>
+                      </p>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div>
+                    <p class="resultsAside">
+                        <span class="itemsFound" id="totalEachItemsFoundNarrow"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+              <div>
+                  <p class="resultsAside">
+                      <span class="itemsFound" id="totalEachItemsFoundExtraWide"></span>
+                      <span class="itemsFound" id="totalEachItemsFoundExtraExtraWide"></span>
+                  </p>
+              </div>
+          </div>
+         <!--  <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div>
+                <p class="resultsAside">
+                    <span class="itemsFound" id="totalEachItemsFoundExtraExtraWide"></span>
+                </p>
+            </div>
+        </div> -->
+              <div class="col-sm-6 col-lg-3 col-xl-3">
+                <div>
+                    &nbsp;
+                </div>
+            </div>
+              </div>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      <footer class="footer py-4  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-12 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script> <i class="fa fa-code"></i> by
+                <a href="https://www.rodelliott.com" class="font-weight-bold" target="_blank">Rod Elliott</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-dashboard.min.js?v=3.0.0"></script>
+  <script>
+    // Input:   Style from user
+    // Output:  Sizes of currently available styles with their respective quantities
+    function getSearchStyles() {
+        clearSearchResults();
+        // Get the value from user input
+        let styleNums = document.getElementById("styleNums").value;
+        var buildURL = "https://albert.customfit.me/api/BasicProducts/GetAllDetails/";
+        // Build out the final query URL
+        var url = buildURL + styleNums;
+        var request = $.get(url, function(response) {
+          // Grab the entire response
+          var fullText = JSON.parse(request.responseText);
+          var mediumKeys = [], mediumValues = [], wideKeys = [], wideValues = [], widthKeys = [], narrowKeys = [], narrowValues = [], extraWideKeys = []; extraWideValues = [], extraExtraWideKeys = [], extraExtraWideValues = [];
+          // Convert response to string to swap out the 1/2 with .5 for sizing
+          var fullTextString = JSON.stringify(fullText);
+          fullTextString = fullTextString.replace(/ 1\/2/g,'.5');
+          // Put it back into an object
+          fullText = JSON.parse(fullTextString);
+          //Store the key/value pairs in separate arrays for inserting
+          // Medium Values
+          var getWidthText = Object.keys(fullText.Inventory.Width);
+          var widthLength = getWidthText.length;
+
+          var mediumCount = "", wideCount = "", narrowCount = "", extraWideCount = "", extraExtraWideCount = "";
+          for (var iter = 0; iter < widthLength; iter++) {
+            if (getWidthText[iter] === "MEDIUM") {
+              mediumKeys = Object.keys(fullText.Inventory.Width.MEDIUM.Size);
+              mediumValues = Object.values(fullText.Inventory.Width.MEDIUM.Size);
+              mediumCount = Object.keys(fullText.Inventory.Width.MEDIUM.Size).length;
+            }
+            else if (getWidthText[iter] === "Medium") {
+              mediumKeys = Object.keys(fullText.Inventory.Width.MEDIUM.Size);
+              mediumValues = Object.values(fullText.Inventory.Width.MEDIUM.Size);
+              mediumCount = Object.keys(fullText.Inventory.Width.MEDIUM.Size).length;
+            }
+            else if (getWidthText[iter] === "D") {
+              mediumKeys = Object.keys(fullText.Inventory.Width.D.Size);
+              mediumValues = Object.values(fullText.Inventory.Width.D.Size);
+              mediumCount = Object.keys(fullText.Inventory.Width.D.Size).length;
+            }
+            else if (getWidthText[iter] === "NARROW") {
+              narrowKeys = Object.keys(fullText.Inventory.Width.NARROW.Size);
+              narrowValues = Object.values(fullText.Inventory.Width.NARROW.Size);
+              narrowCount = Object.keys(fullText.Inventory.Width.NARROW.Size).length;
+            }
+            else if (getWidthText[iter] === "WIDE") {
+              wideKeys = Object.keys(fullText.Inventory.Width.WIDE.Size);
+              wideValues = Object.values(fullText.Inventory.Width.WIDE.Size);
+              wideCount = Object.keys(fullText.Inventory.Width.WIDE.Size).length;
+            }
+            else if (getWidthText[iter] === "Wide") {
+              wideKeys = Object.keys(fullText.Inventory.Width.Wide.Size);
+              wideValues = Object.values(fullText.Inventory.Width.Wide.Size);
+              wideCount = Object.keys(fullText.Inventory.Width.Wide.Size).length;
+            }
+            else if (getWidthText[iter] === "E") {
+              wideKeys = Object.keys(fullText.Inventory.Width.E.Size);
+              wideValues = Object.values(fullText.Inventory.Width.E.Size);
+              wideCount = Object.keys(fullText.Inventory.Width.E.Size).length;
+            }
+            else if (getWidthText[iter] === "2E") {
+              wideKeys = Object.keys(fullText.Inventory.Width["2E"].Size);
+              wideValues = Object.values(fullText.Inventory.Width["2E"].Size);
+              wideCount = Object.keys(fullText.Inventory.Width["2E"].Size).length;
+            }
+            else if (getWidthText[iter] === "XW") {
+              extraWideKeys = Object.keys(fullText.Inventory.Width.XW.Size);
+              extraWideValues = Object.values(fullText.Inventory.Width.XW.Size);
+              extraWideCount = Object.keys(fullText.Inventory.Width.XW.Size).length;
+            }
+            else if (getWidthText[iter] === "4E") {
+              extraWideKeys = Object.keys(fullText.Inventory.Width["4E"].Size);
+              extraWideValues = Object.values(fullText.Inventory.Width["4E"].Size);
+              extraWideCount = Object.keys(fullText.Inventory.Width["4E"].Size).length;
+            }
+            else if (getWidthText[iter] === "6E") {
+              extraExtraWideKeys = Object.keys(fullText.Inventory.Width["6E"].Size);
+              extraExtraWideValues = Object.values(fullText.Inventory.Width["6E"].Size);
+              extraExtraWideCount = Object.keys(fullText.Inventory.Width["6E"].Size).length;
+            }
+          }
+          var widthText = fullText.Inventory.Width;
+          widthText = Object.keys(widthText);
+          // Check to see if width has medium, wide, or both
+          if (widthText.length === 1) {
+            for (var z = 0; z < widthText.length ; z++) {
+              widthKeys[z] = widthText[z];
+            }
+          }
+          else if (widthText.length === 2) {
+            for (var z = 0; z < widthText.length ; z++) {
+              widthKeys[z] = widthText[z];
+            }
+          }
+
+          let table = document.createElement('table');
+          let thead = document.createElement('thead');
+          let tbody = document.createElement('tbody');
+          table.appendChild(thead);
+          table.appendChild(tbody);
+
+          // Create second table structure
+          let table1 = document.createElement('table');
+          let thead1 = document.createElement('thead');
+          let tbody1 = document.createElement('tbody');
+          table1.appendChild(thead1);
+          table1.appendChild(tbody1);
+
+          // Create second table structure
+          let table2 = document.createElement('table');
+          let thead2 = document.createElement('thead');
+          let tbody2 = document.createElement('tbody');
+          table2.appendChild(thead2);
+          table2.appendChild(tbody2);
+
+          let table3 = document.createElement('table');
+          let thead3 = document.createElement('thead');
+          let tbody3 = document.createElement('tbody');
+          table3.appendChild(thead3);
+          table3.appendChild(tbody3);
+
+          let table4 = document.createElement('table');
+          let thead4 = document.createElement('thead');
+          let tbody4 = document.createElement('tbody');
+          table4.appendChild(thead4);
+          table4.appendChild(tbody4);
+
+          // Insert table
+          document.getElementById('totalEachItemsFoundMedium').appendChild(table);
+          document.getElementById('totalEachItemsFoundWide').appendChild(table1);
+          document.getElementById('totalEachItemsFoundNarrow').appendChild(table2);
+          document.getElementById('totalEachItemsFoundExtraWide').appendChild(table3);
+          document.getElementById('totalEachItemsFoundExtraExtraWide').appendChild(table4);
+
+          let firstRow = document.createElement('tr');
+          let firstRow1 = document.createElement('tr');
+          let firstRow2 = document.createElement('tr');
+          let firstRow3 = document.createElement('tr');
+          let firstRow4 = document.createElement('tr');
+          let firstHeading = document.createElement('th');
+          let firstHeading1 = document.createElement('th');
+          let firstHeading2 = document.createElement('th');
+          let firstHeading3 = document.createElement('th');
+          let firstHeading4 = document.createElement('th');
+          firstHeading.innerHTML = "Size";
+          firstHeading1.innerHTML = "Size";
+          firstHeading2.innerHTML = "Size";
+          firstHeading3.innerHTML = "Size";
+          firstHeading4.innerHTML = "Size";
+
+          // Width Heading
+          let secondHeading = document.createElement('th');
+          let secondHeading1 = document.createElement('th');
+          let secondHeading2 = document.createElement('th');
+          let secondHeading3 = document.createElement('th');
+          let secondHeading4 = document.createElement('th');
+          secondHeading.innerHTML = "Width";
+          secondHeading1.innerHTML = "Width";
+          secondHeading2.innerHTML = "Width";
+          secondHeading3.innerHTML = "Width";
+          secondHeading4.innerHTML = "Width";
+
+          // Create Quantity Heading
+          let thirdHeading = document.createElement('th');
+          let thirdHeading1 = document.createElement('th');
+          let thirdHeading2 = document.createElement('th');
+          let thirdHeading3 = document.createElement('th');
+          let thirdHeading4 = document.createElement('th');
+          thirdHeading.innerHTML = "QTY";
+          thirdHeading1.innerHTML = "QTY";
+          thirdHeading2.innerHTML = "QTY";
+          thirdHeading3.innerHTML = "QTY";
+          thirdHeading4.innerHTML = "QTY";
+
+          // Append All Headings
+          firstRow.appendChild(firstHeading);
+          firstRow.appendChild(secondHeading);
+          firstRow.appendChild(thirdHeading);
+          firstRow1.appendChild(firstHeading1);
+          firstRow1.appendChild(secondHeading1);
+          firstRow1.appendChild(thirdHeading1);
+          firstRow2.appendChild(firstHeading2);
+          firstRow2.appendChild(secondHeading2);
+          firstRow2.appendChild(thirdHeading2);
+          firstRow3.appendChild(firstHeading3);
+          firstRow3.appendChild(secondHeading3);
+          firstRow3.appendChild(thirdHeading3);
+          firstRow4.appendChild(firstHeading4);
+          firstRow4.appendChild(secondHeading4);
+          firstRow4.appendChild(thirdHeading4);
+
+          // Create Heading for the output results
+          //document.getElementById("resultsText").innerHTML = "Results for " + styleNums;
+          // Get length of the Size array for each width to use to insert data values
+          for (var i = 0; i < widthLength; i++) {
+            if (widthText[i] === "MEDIUM" || widthText[i] === "D" || widthText[i] === "Medium") {
+              thead.appendChild(firstRow);
+              for (var iter = 0; iter < mediumCount; iter++) {
+                var tr = document.createElement("tr");
+                var td = tr.appendChild(document.createElement("td"));
+                var td1 = tr.appendChild(document.createElement("td"));
+                var td2 = tr.appendChild(document.createElement("td"));
+                td.innerHTML = mediumKeys[iter];
+                td1.innerHTML = widthText[i];
+                td2.innerHTML = mediumValues[iter];
+                tbody.appendChild(tr);
+              }
+            }
+            else if (widthText[i] === "WIDE" || widthText[i] === "E" || widthText[i] === "Wide" || widthText[i] === "2E") {
+              thead1.appendChild(firstRow1);
+              for (var iter = 0; iter < wideCount; iter++) {
+                var tr = document.createElement("tr");
+                var td = tr.appendChild(document.createElement("td"));
+                var td1 = tr.appendChild(document.createElement("td"));
+                var td2 = tr.appendChild(document.createElement("td"));
+                td.innerHTML = wideKeys[iter];
+                td1.innerHTML = widthText[i];
+                td2.innerHTML = wideValues[iter];
+                tbody1.appendChild(tr);
+              }
+            }
+            else if (widthText[i] === "NARROW") {
+              thead2.appendChild(firstRow2);
+              for (var iter = 0; iter < wideCount; iter++) {
+                var tr = document.createElement("tr");
+                var td = tr.appendChild(document.createElement("td"));
+                var td1 = tr.appendChild(document.createElement("td"));
+                var td2 = tr.appendChild(document.createElement("td"));
+                td.innerHTML = wideKeys[iter];
+                td1.innerHTML = widthText[i];
+                td2.innerHTML = wideValues[iter];
+                tbody2.appendChild(tr);
+              }
+            }
+            else if (widthText[i] === "4E" || widthText[i] === "XW") {
+              thead3.appendChild(firstRow3);
+              for (var iter = 0; iter < extraWideCount; iter++) {
+                var tr = document.createElement("tr");
+                var td = tr.appendChild(document.createElement("td"));
+                var td1 = tr.appendChild(document.createElement("td"));
+                var td2 = tr.appendChild(document.createElement("td"));
+                td.innerHTML = extraWideKeys[iter];
+                td1.innerHTML = widthText[i];
+                td2.innerHTML = extraWideValues[iter];
+                tbody3.appendChild(tr);
+              }
+            }
+            else if (widthText[i] === "6E") {
+              thead4.appendChild(firstRow4);
+              for (var iter = 0; iter < extraExtraWideCount; iter++) {
+                var tr = document.createElement("tr");
+                var td = tr.appendChild(document.createElement("td"));
+                var td1 = tr.appendChild(document.createElement("td"));
+                var td2 = tr.appendChild(document.createElement("td"));
+                td.innerHTML = extraExtraWideKeys[iter];
+                td1.innerHTML = widthText[i];
+                td2.innerHTML = extraExtraWideValues[iter];
+                tbody4.appendChild(tr);
+              }
+            }
+          }
+        });
+    }
+    // Clears the results area
+    function clearSearchResults() {
+        document.getElementById("totalEachItemsFoundMedium").innerHTML = '';
+        document.getElementById("totalEachItemsFoundWide").innerHTML = '';
+        document.getElementById("totalEachItemsFoundNarrow").innerHTML = '';
+        document.getElementById("totalEachItemsFoundExtraWide").innerHTML = '';
+        document.getElementById("totalEachItemsFoundExtraExtraWide").innerHTML = '';
+    }
+    </script>
+</body>
+</html>

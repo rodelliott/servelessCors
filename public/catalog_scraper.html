@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    Lehigh Dashboard
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <script src="./assets/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+   <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="heled0yuvkswkv3"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <style>
+      .accordion-item{background-color:#fff;padding:10px;}
+.accordion-button::after{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")}
+.accordion-button:not(.collapsed)::after{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");transform:rotate(-180deg);}
+.accordion-item{margin-bottom:0px;}
+.scraperAside{display:block;font-size:0.85rem;font-style:italic;background-color:#f1f1f1;padding:15px;margin-top:5px;border-radius:5px;color:#000;}
+        .scraperH1{font-size:1.5rem;text-transform:uppercase;border-bottom:2px solid;margin-top:10px;}
+        .scraperInput{padding-left:5px;border-width:1px;border-top:none;border-right:none;border-left:none;border-bottom: 2px solid #d6d6d6;height:35px;min-width:30%;}
+        .scraperBTN{background:#000;border:1px solid #000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;margin-left:0px;}
+        .scraperBTN:hover{color:#000;background:#fff;}
+        .clearBTN{background:#000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;border:1px solid #000;}
+        .clearBTN:hover{background:#fff;border: 1px solid #000;color:#000;}
+        .resultsAside{display:block;font-size:1rem;background-color:#f1f1f1;padding:15px;margin-top:5px;min-height: 90px;border-radius:10px;font-weight:700;}
+        .marginTop{margin-top:15px;}
+        .centerTheText{text-align:center;}
+        .noMargin{margin: 0 auto;}
+        .resultsBlock{text-transform: uppercase;font-size: 0.8rem;border-bottom: 1px solid;}
+        .itemsFound{display:block;font-size:0.9rem;margin-top:5px;}
+        .dropdownSelect{display: block;margin-bottom:10px;font-size:0.75rem;min-height:35px;border-radius: 8px;background-color:#334767;color:#fff;padding:10px;width:234px;text-transform:uppercase;font-weight:700;}
+        .blackBar{background:#000;color:#fff;font-size:0.7rem;text-align:center;padding:5px;}
+        .bottomMargin{margin-bottom:50px;}
+        #eachItemFound{word-break:break-all;}
+  </style>
+</head>
+<body class="g-sidenav-show  bg-gray-200">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href="index.html" target="_blank">
+        <img src="./assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold text-white">Lehigh Dashboard</span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Lehigh Brands</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="index.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">dashboard</i>
+            </div>
+            <span class="nav-link-text ms-1">Retail B2C</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="outfitters.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">hiking</i>
+            </div>
+            <span class="nav-link-text ms-1">Outfitters</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="safetyshoes.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">do_not_step</i>
+            </div>
+            <span class="nav-link-text ms-1">Safety Shoes</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="slipgrips.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">water</i>
+            </div>
+            <span class="nav-link-text ms-1">SlipGrips</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="customfit.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">straighten</i>
+            </div>
+            <span class="nav-link-text ms-1">CustomFit</span>
+          </a>
+        </li>
+        <li class="nav-item mt-3">
+            <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Apps &amp; Links</h6>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="dropbox.html">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">inventory_2</i>
+              </div>
+              <span class="nav-link-text ms-1">Dropbox</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="inventory.html">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">production_quantity_limits</i>
+              </div>
+              <span class="nav-link-text ms-1">Check Inventory</span>
+            </a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white active bg-gradient-info" href="search-scraper.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">construction</i>
+            </div>
+            <span class="nav-link-text ms-1">Search Scraper</span>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="plp-scraper.html">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">engineering</i>
+              </div>
+              <span class="nav-link-text ms-1">PLP Scraper</span>
+            </a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="toprated.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">rate_review</i>
+            </div>
+            <span class="nav-link-text ms-1">Top Rated Scraper</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="qr.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">qr_code_scanner</i>
+            </div>
+            <span class="nav-link-text ms-1">QR Codes</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Retail B2C</li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">Search Term Scraper</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- 
+        End Navbar
+    -->
+    <div class="container-fluid py-4">
+      <div class="row">
+      <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-info shadow-primary-info border-radius-lg pt-4 pb-3">
+                  <h6 class="text-white text-capitalize ps-3">Search Scraper</h6>
+                  <p class="text-white p-3 pt-0 pb-0">To get a list of SKUs select your site below and enter your search term.
+                  </p>
+                </div>
+              </div>
+              <div class="card-body p-3 pb-2">
+                <p>
+                  <span class="scraperAside">For example: You'd like to check Rocky Boots and obtain a list of styles that populate on the search results page for <b><i>duty</i></b> (/Search?q=duty). Just select Rocky Brands from the menu and then input <b><i>duty</i></b> into the search field and hit submit.</span>
+              </p>
+              <form>
+                  <select size="1" id="siteSelectionSearch" class="dropdownSelect">
+                      <option value="RB">Rocky Boots</option>
+                      <option value="GB">Georgia Boot</option>
+                      <option value="DB">Durango Boots</option>
+                      <option value="LO">Lehigh Outfitters</option>
+                      <option value="LSS">Lehigh Safety Shoes</option>
+                      <option value="SG">SlipGrips</option>
+                      <option value="MB">Muck Boot</option>
+                      <option value="XT">Xtratuf</option>
+                  </select>
+                  <input id="styleNums" placeholder="Search Term (e.g. duty)" class="scraperInput" style="display:block;margin-bottom:10px;"></input>
+                  <button type="button" class="btn btn-info" value='send' id="submit" onclick="getSearchStyles()">Submit</button>
+                  <button type="button" class="btn btn-dark" value='send' id="submit" onclick="clearSearchResults()">Clear Results</button>
+              </form>
+              <div class="col-md-12">
+                <p style="font-size:12px;">
+              * If when you hit submit <strong>Total Styles Found</strong> shows first in the results output but no styles listed after it, it is because there are a large number of styles the app is iterating through. Be patient. Or not. Your choice.
+            </p>
+            </div>
+              <div class="row marginTop fullResults ml-0 mr-0">
+                <div class="col-md-12">
+                    <div>
+                        <p class="resultsAside">
+                            <span class="noMargin resultsBlock">Results Output Below</span>
+                            <span class="itemsFound" id="totalSearchItemsFound"></span>
+                            <span class="itemsFound" id="totalEachItemsFound"></span>
+                        </p>
+                    </div>
+                </div>
+              </div>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      <footer class="footer py-4  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-12 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script> <i class="fa fa-code"></i> by
+                <a href="https://www.rodelliott.com" class="font-weight-bold" target="_blank">Rod Elliott</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-dashboard.min.js?v=3.0.0"></script>
+  <script>
+    function getSearchStyles() {
+        let styleNums = document.getElementById("styleNums").value;
+        //console.log(typeof(styleNums));
+        let selectElement = document.querySelector('#siteSelectionSearch');   
+        let siteOutput = selectElement.value;
+        let correctResponse = 0;
+        var buildURL;
+        while (correctResponse != 1) {
+            if (siteOutput === "RB") {
+                buildURL = "https://www.rockyboots.com/Search?q=";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "GB") {
+                buildURL = "https://www.georgiaboot.com/Search?q=";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "DB") {
+                buildURL = "https://www.durangoboots.com/Search?q=";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "LO") {
+                buildURL = "https://www.lehighoutfitters.com/Search?q=";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "LSS") {
+                buildURL = "https://www.lehighsafetyshoes.com/Search?q=";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "SG") {
+                buildURL = "https://www.slipgrips.com/Search?cgid=1106";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "MB") {
+                buildURL = "https://www.muckbootcompany.com/Search?q=";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "XT") {
+                buildURL = "https://www.xtratuf.com/Search?q=";
+                correctResponse = 1;
+            }
+            else {
+                correctResponse = 1;
+            }
+        }
+        var url = "https://rockybrands-cors.herokuapp.com/" + buildURL + styleNums;
+        var request = $.get(url, function(response) {
+            var fullText = request.responseText;
+            var subStr = fullText.match("<div class=\"product-result-count d-none d-lg-block\">\n(.*) Items\n</div>");
+            subStr = subStr[1];
+            subStr = subStr.split(',').join('');
+            //console.log(subStr);
+            url = url + "&sz=" + subStr;
+            //console.log(url);
+            document.getElementById("totalSearchItemsFound").innerHTML = "Total Styles Found: " + subStr;
+            request = $.get(url, function(response) {
+                fullText = request.responseText;
+                //console.log(fullText);
+                var styleArr = [], styleList = [];
+                //console.log(styleArr);
+                var regex = /visually-hidden bfx-price-product bfx-sku">(.*)<\/span/gm;
+                try {
+                    for (var i = 0; ((styleArr = regex.exec(fullText)[1]) !== null); i++) {
+                            styleList[i] = `${styleArr}`;
+                            //console.log(styleList[i]);
+                    }
+                }
+                catch (error) {
+                        console.error('TypeError Found. That\'s expected behavior when no more matches are found. Moving along...');
+                }
+                document.getElementById("totalEachItemsFound").innerHTML = (styleList + ",").slice(0,-1);
+            });
+        });
+    }
+    function clearSearchResults() {
+        document.getElementById("totalSearchItemsFound").innerHTML = '';
+        document.getElementById("totalEachItemsFound").innerHTML = '';
+    }
+    </script>
+</body>
+
+</html>

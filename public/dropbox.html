@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    Lehigh Dashboard
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="heled0yuvkswkv3"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <style>
+      .accordion-item{background-color:#fff;padding:10px;}
+.accordion-button::after{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")}
+.accordion-button:not(.collapsed)::after{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");transform:rotate(-180deg);}
+.accordion-item{margin-bottom:0px;}
+  </style>
+</head>
+<body class="g-sidenav-show  bg-gray-200">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href="index.html" target="_blank">
+        <img src="./assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold text-white">Lehigh Dashboard</span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Lehigh Brands</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="index.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">dashboard</i>
+            </div>
+            <span class="nav-link-text ms-1">Retail B2C</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="outfitters.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">hiking</i>
+            </div>
+            <span class="nav-link-text ms-1">Outfitters</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="safetyshoes.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">do_not_step</i>
+            </div>
+            <span class="nav-link-text ms-1">Safety Shoes</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="slipgrips.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">water</i>
+            </div>
+            <span class="nav-link-text ms-1">SlipGrips</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="customfit.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">straighten</i>
+            </div>
+            <span class="nav-link-text ms-1">CustomFit</span>
+          </a>
+        </li>
+        <li class="nav-item mt-3">
+            <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Apps &amp; Links</h6>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white active bg-gradient-info" href="dropbox.html">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">inventory_2</i>
+              </div>
+              <span class="nav-link-text ms-1">Dropbox</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="inventory.html">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">production_quantity_limits</i>
+              </div>
+              <span class="nav-link-text ms-1">Check Inventory</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="search-scraper.html">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">construction</i>
+              </div>
+              <span class="nav-link-text ms-1">Search Scraper</span>
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-white" href="plp-scraper.html">
+                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="material-icons opacity-10">engineering</i>
+                </div>
+                <span class="nav-link-text ms-1">PLP Scraper</span>
+              </a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="toprated.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">rate_review</i>
+            </div>
+            <span class="nav-link-text ms-1">Top Rated Scraper</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="qr.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">qr_code_scanner</i>
+            </div>
+            <span class="nav-link-text ms-1">QR Codes</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Retail B2C</li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">Dropbox Files</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- 
+        End Navbar
+    -->
+    <div class="container-fluid py-4">
+      <div class="row">
+      <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-info shadow-primary-info border-radius-lg pt-4 pb-3">
+                  <h6 class="text-white text-capitalize ps-3">Dropbox Files</h6>
+                </div>
+              </div>
+              <div class="card-body px-0 pb-2">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Brand Items
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div id="dropbox-brand-items" style="height:500px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Marketing Emails
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div id="dropbox-marketing-emails" style="height:500px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Company &amp; Software SVGs
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div id="dropbox-svg-files" style="height:500px;"></div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <footer class="footer py-4  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-12 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script> <i class="fa fa-code"></i> by
+                <a href="https://www.rodelliott.com" class="font-weight-bold" target="_blank">Rod Elliott</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-dashboard.min.js?v=3.0.0"></script>
+<script>
+    var element = document.getElementById("dropbox-brand-items");
+    var options = {
+      link: "https://www.dropbox.com/sh/j2rnunfa12cu6lv/AABqPW4D9zteHkEdPIHTtQkDa?dl=0",
+      file: {
+        zoom: "fit"
+      },
+      folder: {
+        view: "list",
+        headerSize: "normal"
+      }
+    }
+    Dropbox.embed(options, element);
+</script>
+<script>
+    var element2 = document.getElementById("dropbox-marketing-emails");
+    var options = {
+      link: "https://www.dropbox.com/sh/qomh61fgthww093/AAB5pzTF-302lUN10aaoqMBJa?dl=0",
+      file: {
+        zoom: "fit"
+      },
+      folder: {
+        view: "list",
+        headerSize: "normal"
+      }
+    }
+    Dropbox.embed(options, element2);
+</script>
+<script>
+    var element3 = document.getElementById("dropbox-svg-files");
+    var options = {
+      link: "https://www.dropbox.com/sh/gc1s570n2yvxbyn/AAAA8wNio7U7uUYhMYiXkOsNa?dl=0",
+      file: {
+        zoom: "fit"
+      },
+      folder: {
+        view: "list",
+        headerSize: "normal"
+      }
+    }
+    Dropbox.embed(options, element3);
+</script>
+</body>
+
+</html>
